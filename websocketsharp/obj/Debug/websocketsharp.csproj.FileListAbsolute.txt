@@ -1,0 +1,5 @@
+C:\Users\Admin\Desktop\远程客户端\RemoteClient\websocketsharp\bin\Debug\websocketsharp.dll
+C:\Users\Admin\Desktop\远程客户端\RemoteClient\websocketsharp\bin\Debug\websocketsharp.pdb
+C:\Users\Admin\Desktop\远程客户端\RemoteClient\websocketsharp\obj\Debug\websocketsharp.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\远程客户端\RemoteClient\websocketsharp\obj\Debug\websocketsharp.dll
+C:\Users\Admin\Desktop\远程客户端\RemoteClient\websocketsharp\obj\Debug\websocketsharp.pdb

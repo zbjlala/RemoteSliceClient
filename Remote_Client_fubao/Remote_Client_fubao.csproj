@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE2EBCBD-8736-4626-A42D-65C317678596}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Remote_Client_fubao</RootNamespace>
+    <AssemblyName>Remote_Client_fubao</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DSkin">
+      <HintPath>E:\项目\fubao\【4.0】DSkin20180712154030\DSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="DSkin.Design">
+      <HintPath>E:\项目\fubao\【4.0】DSkin20180712154030\DSkin.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.4.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.4.0\lib\net40\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Client\Client_fubao.cs" />
+    <Compile Include="Client\RemoteScreenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Client\RemoteScreenUserControl.Designer.cs">
+      <DependentUpon>RemoteScreenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\ServiceNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\ServiceNotice.Designer.cs">
+      <DependentUpon>ServiceNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\TrueOrFalse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\TrueOrFalse.designer.cs">
+      <DependentUpon>TrueOrFalse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Handler\Handler.cs" />
+    <Compile Include="Core\Interface\IUserToken.cs" />
+    <Compile Include="Core\Tcp\ClientSocket.cs" />
+    <Compile Include="Helper\CompressHelper.cs" />
+    <Compile Include="Helper\DateTimeHelper.cs" />
+    <Compile Include="Helper\ExtentionHelper.cs" />
+    <Compile Include="Helper\HttpHelper\HttpHelper1.cs" />
+    <Compile Include="Helper\HttpHelper\HttpProxy.cs" />
+    <Compile Include="Helper\HttpHelper\InterfaceUrl.cs" />
+    <Compile Include="Helper\ImageComparer.cs" />
+    <Compile Include="Helper\ImageHelper.cs" />
+    <Compile Include="Helper\RandomHelper.cs" />
+    <Compile Include="Helper\ResultType.cs" />
+    <Compile Include="Helper\SerializeHelper.cs" />
+    <Compile Include="Helper\VerbalInfo.cs" />
+    <Compile Include="Helper\Win32\MouseAndKeyHelper.cs" />
+    <Compile Include="kefu\Customer_Service_Remote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kefu\Customer_Service_Remote.Designer.cs">
+      <DependentUpon>Customer_Service_Remote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kefu\WorkOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kefu\WorkOrder.designer.cs">
+      <DependentUpon>WorkOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ClientEntity\LoginInfo.cs" />
+    <Compile Include="Model\ClientEntity\WorkOrderModel.cs" />
+    <Compile Include="Model\Entity\Message.cs" />
+    <Compile Include="Model\Enum\MessageProtocalEnum.cs" />
+    <Compile Include="Model\Interface\IMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Remote\ClientConfig.cs" />
+    <Compile Include="Remote\Handler.cs" />
+    <Compile Include="Remote\MS\MessageClient.cs" />
+    <Compile Include="Remote\MS\Model\TcpPackage.cs" />
+    <Compile Include="Remote\MS\Model\UserToken.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\websocketsharp\websocketsharp.csproj">
+      <Project>{EDB93B05-E39C-459B-BACC-42AE81B3C885}</Project>
+      <Name>websocketsharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Client\RemoteScreenUserControl.resx">
+      <DependentUpon>RemoteScreenUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\ServiceNotice.resx">
+      <DependentUpon>ServiceNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\TrueOrFalse.resx">
+      <DependentUpon>TrueOrFalse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kefu\Customer_Service_Remote.resx">
+      <DependentUpon>Customer_Service_Remote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kefu\WorkOrder.resx">
+      <DependentUpon>WorkOrder.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
